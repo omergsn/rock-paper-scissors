@@ -1,0 +1,39 @@
+html{
+    background-color: rgb(32, 30, 30);
+}
+#start{
+    font-family: fantasy;
+    margin-top:50vh;
+    font-weight:bold;
+    font-size:xx-large;
+    letter-spacing: 15px;
+    background-color: rgb(135, 12, 12);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+
+    
+}
+a{
+    text-decoration: none;
+}
+footer{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    bottom:0px;
+    width:100vw;
+    left:0px;
+    background-color:#4ce689;
+    text-align: center;
+    font-size: larger;
+    height:4vw;
+}

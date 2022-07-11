@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="styles1.css" />
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <script>
+        let userScore = 0;
+        let compScore = 0;
+        function rng(choice) {
+        let random= Math.floor(Math.random() * (0 - 4 + 1) + 4);
+        return game(choice,random);
+}
+        function game(choice,random){
+            document.getElementById('rock').style.background='rgb(32, 30, 30)';
+            document.getElementById('paper').style.background='rgb(32, 30, 30)';
+            document.getElementById('scissors').style.background='rgb(32, 30, 30)';
+            document.getElementById('1').style.background='rgb(32, 30, 30)';
+            document.getElementById('2').style.background='rgb(32, 30, 30)';
+            document.getElementById('3').style.background='rgb(32, 30, 30)';
+
+            let randstr = "";
+            if (random == 1)
+            randstr="rock";
+
+            if (random == 2)
+            randstr="paper";
+
+            if (random == 3)
+            randstr = "scissors";
+
+            
+            if (choice == "rock" && random == 1){
+                document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr + "<br>" + "Tie!";
+                document.getElementById(choice).style.background='yellow';
+            document.getElementById(random).style.background='yellow';
+            }
+            if(choice == "rock" && random == 2){
+                document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Computer Wins!";
+                compScore++;
+                document.getElementById(choice).style.background='red';
+            document.getElementById(random).style.background='red';
+            }
+            if(choice == "rock" && random == 3){
+                document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "You Win!";
+                userScore++;
+                document.getElementById(choice).style.background='green';
+            document.getElementById(random).style.background='green';
+            }
+
+            if (choice == "paper" && random == 1){
+                document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "You Win!";
+                userScore++;
+                document.getElementById(choice).style.background='green';
+            document.getElementById(random).style.background='green';
+            }
+            if(choice == "paper" && random == 2){
+                document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Tie!";
+                document.getElementById(choice).style.background='yellow';
+            document.getElementById(random).style.background='yellow';
+                
+            }
+            if(choice == "paper" && random == 3){
+                document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Computer Wins!";
+                compScore++;
+                document.getElementById(choice).style.background='red';
+            document.getElementById(random).style.background='red';
+            }
+
+            if (choice == "scissors" && random == 1){
+                document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Computer Wins!";
+                compScore++;
+                document.getElementById(choice).style.background='red';
+            document.getElementById(random).style.background='red';
+            }
+            if(choice == "scissors" && random == 2){
+                document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "You Win!";
+                userScore++;
+                document.getElementById(choice).style.background='green';
+            document.getElementById(random).style.background='green';
+            }
+            if(choice == "scissors" && random == 3){
+                document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Tie!";
+                document.getElementById(choice).style.background='yellow';
+            document.getElementById(random).style.background='yellow';
+            }
+            document.getElementById('sb').innerHTML = "Scoreboard " + "<br>" + "Computer's Score: " + compScore +
+            "<br>" + "Your Score: " + userScore;
+            
+        }
+    </script>
+    <div class="scoreboard">
+    <strong id="sb">Scoreboard<br>
+        Computer's Score: 0<br>
+        Your Score: 0
+    </strong>
+    </div>
+    <section id="choices">
+        <strong>Choose:</strong>
+    <div id="player-choice">
+    <button value="rock" id="rock" onclick="rng(document.getElementById('rock').value)">🗿</button>
+    <button value="paper" id="paper" onclick="rng(document.getElementById('paper').value)">📜</button>
+    <button value="scissors" id="scissors" onclick="rng(document.getElementById('scissors').value)">✂️</button>
+    </div>
+
+    <div id="random-choice">
+    <button disabled id="1">🗿</button>
+    <button disabled id="2">📜</button>
+    <button disabled id="3">✂️</button>
+    </div>
+    
+    </section>
+    <strong id="randchoice" >Computer's choice:</strong>
+    <footer>
+        <code>made with love ❤️ by <a class="mwl" target="_blank" href="https://omergsn.github.io/personal-portfolio-fcc/">remokura</a></code>
+</body>
+</html>
