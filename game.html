@@ -43,20 +43,20 @@
                 document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Computer Wins!";
                 compScore++;
                 document.getElementById(choice).style.background='red';
-            document.getElementById(random).style.background='red';
+            document.getElementById(random).style.background='green';
             }
             if(choice == "rock" && random == 3){
                 document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "You Win!";
                 userScore++;
                 document.getElementById(choice).style.background='green';
-            document.getElementById(random).style.background='green';
+            document.getElementById(random).style.background='red';
             }
 
             if (choice == "paper" && random == 1){
                 document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "You Win!";
                 userScore++;
                 document.getElementById(choice).style.background='green';
-            document.getElementById(random).style.background='green';
+            document.getElementById(random).style.background='red';
             }
             if(choice == "paper" && random == 2){
                 document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Tie!";
@@ -68,20 +68,20 @@
                 document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Computer Wins!";
                 compScore++;
                 document.getElementById(choice).style.background='red';
-            document.getElementById(random).style.background='red';
+            document.getElementById(random).style.background='green';
             }
 
             if (choice == "scissors" && random == 1){
                 document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Computer Wins!";
                 compScore++;
                 document.getElementById(choice).style.background='red';
-            document.getElementById(random).style.background='red';
+            document.getElementById(random).style.background='green';
             }
             if(choice == "scissors" && random == 2){
                 document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "You Win!";
                 userScore++;
                 document.getElementById(choice).style.background='green';
-            document.getElementById(random).style.background='green';
+            document.getElementById(random).style.background='red';
             }
             if(choice == "scissors" && random == 3){
                 document.getElementById('randchoice').innerHTML = "Computer's choice: " + randstr+ "<br>" + "Tie!";
@@ -101,6 +101,10 @@
     </div>
     <section id="choices">
         <strong>Choose:</strong>
+        <br>
+        <br>
+        <br>
+        <br>
     <div id="player-choice">
     <button value="rock" id="rock" onclick="rng(document.getElementById('rock').value)">🗿</button>
     <button value="paper" id="paper" onclick="rng(document.getElementById('paper').value)">📜</button>
@@ -116,6 +120,7 @@
     </section>
     <strong id="randchoice" >Computer's choice:</strong>
     <footer>
-        <code>made with love ❤️ by <a class="mwl" target="_blank" href="https://omergsn.github.io/personal-portfolio-fcc/">remokura</a></code>
+        <code>made with love ❤️ by <a target="_blank" href="https://omergsn.github.io/personal-portfolio-fcc/">remokura</a></code>
+    </footer>
 </body>
 </html>
